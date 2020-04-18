@@ -20,7 +20,7 @@ class QuotesActivity : AppCompatActivity() {
 
     private fun initializeUi() {
         /*
-        Use the ViewModelProviders class to create or get the QuotesViewModel for this activity.
+        Use the ViewModelProvider class to create or get the QuotesViewModel for this activity.
         It handles maintaining the ViewModel as a singleton.
          */
         val quotesViewModel =
