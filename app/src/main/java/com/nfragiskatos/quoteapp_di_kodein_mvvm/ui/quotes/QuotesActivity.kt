@@ -3,7 +3,7 @@ package com.nfragiskatos.quoteapp_di_kodein_mvvm.ui.quotes
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import com.nfragiskatos.quoteapp_di_kodein_mvvm.R
 import com.nfragiskatos.quoteapp_di_kodein_mvvm.data.model.Quote
 import kotlinx.android.synthetic.main.activity_quotes.*
@@ -24,7 +24,7 @@ class QuotesActivity : AppCompatActivity() {
         It handles maintaining the ViewModel as a singleton.
          */
         val quotesViewModel =
-            ViewModelProviders.of(this, quotesViewModelFactory).get(QuotesViewModel::class.java)
+            ViewModelProvider(this, quotesViewModelFactory).get(QuotesViewModel::class.java)
 
         /*
         Observe the LiveData quotes list from the QuotesViewModel, which in turn observes LiveData from
